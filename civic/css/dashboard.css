@@ -1,0 +1,117 @@
+.dashboard-page .mini-title {
+  font-size: 14px;
+}
+
+.dashboard-page .score-label {
+  font-size: 12px;
+}
+
+.dashboard-page .score-value {
+  font-size: 48px;
+}
+
+.dashboard-page .score-note {
+  font-size: 14px;
+}
+
+.dashboard-page .stats strong {
+  font-size: 32px;
+}
+
+.dashboard-page .stats span {
+  font-size: 13px;
+}
+
+.dashboard-page .trend-chip {
+  font-size: 12px;
+}
+
+.dashboard-page .mini-chart {
+  height: 126px !important;
+  margin-top: 8px !important;
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+  gap: 8px !important;
+  align-items: end !important;
+  padding-bottom: 18px;
+}
+
+.dashboard-page .mini-chart > div {
+  display: block !important;
+  min-height: 22px !important;
+  width: 100%;
+  background: linear-gradient(180deg, #8cb7f5 0%, #3f7ddd 100%) !important;
+  box-shadow: 0 2px 6px rgba(45, 103, 189, 0.22) !important;
+  border-radius: 10px 10px 5px 5px;
+  position: relative !important;
+}
+
+.dashboard-page .mini-chart > div > span {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  font-size: 12px;
+  bottom: -22px;
+  font-weight: 600;
+  color: #5a6b83 !important;
+  white-space: nowrap;
+}
+
+.dashboard-page .chart-meta {
+  margin-top: 26px;
+  font-size: 13px;
+}
+
+.dashboard-page .ring-viz {
+  width: 88px !important;
+  height: 88px !important;
+  border-radius: 50% !important;
+  background: conic-gradient(#2f6fd6 0 42%, #36b37e 42% 73%, #f5a524 73% 100%) !important;
+  position: relative !important;
+}
+
+.dashboard-page .ring-viz::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 15px !important;
+  border-radius: 50% !important;
+  background: #ffffff !important;
+}
+
+.dashboard-page .legend-list {
+  font-size: 13px;
+}
+
+.dashboard-page .distribution-row strong {
+  font-size: 13px;
+}
+
+.dashboard-page .distribution-track {
+  height: 7px !important;
+  background: #dce8f6 !important;
+  border-radius: 999px !important;
+}
+
+.dashboard-page .distribution-fill {
+  height: 100% !important;
+  border-radius: inherit !important;
+}
+
+.dashboard-page .resolution-line {
+  font-size: 13px;
+}
+
+.dashboard-page .resolution-line strong {
+  font-size: 18px;
+}
+
+.dashboard-page .alert-title,
+.dashboard-page .activity-title {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.dashboard-page .alert-meta,
+.dashboard-page .activity-meta {
+  font-size: 13px;
+}

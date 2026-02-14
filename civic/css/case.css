@@ -1,0 +1,24 @@
+.case-title {
+  font-size: 26px;
+}
+
+.case-desc {
+  font-size: 14px;
+}
+
+.case-meta-item .label {
+  font-size: 12px;
+}
+
+.case-meta-item .value {
+  font-size: 14px;
+}
+
+.authority strong {
+  font-size: 15px;
+}
+
+.authority p,
+.trust-line {
+  font-size: 13px;
+}

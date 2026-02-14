@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2c5d8d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Civic" />
+  <title>Profile - Civic</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/sticky-header.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+  <script defer src="js/main.js"></script>
+  <script defer src="js/profile.js"></script>
+  <script defer src="js/sticky-header.js"></script>
+</head>
+
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-dot"></div>
+        Civic
+      </div>
+      <button class="logout">Logout</button>
+    </header>
+
+    <main class="page">
+      <!-- <div class="page-title">Citizen Profile</div>
+      <div class="page-sub">Identity, reliability, and civic contribution overview.</div> -->
+
+      <div class="card profile-hero">
+        <div class="avatar" aria-hidden="true">
+          <svg class="avatar-man" viewBox="0 0 64 64" role="img">
+            <circle cx="32" cy="20" r="11" fill="#f3c9a8"></circle>
+            <path d="M21 18c0-8 4-12 11-12s11 4 11 12c-2-3-5-5-11-5s-9 2-11 5z" fill="#1f3e66"></path>
+            <rect x="19" y="34" width="26" height="18" rx="9" fill="#2f6fd6"></rect>
+            <path d="M25 34h14l-7 7z" fill="#ffffff" opacity="0.9"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="profile-name">Aryan</div>
+          <div class="profile-id">Citizen ID: CIV-1092-44</div>
+          <span class="verification-pill">Identity Verified</span>
+          <div class="tier-badge">Tier: Trusted Verifier</div>
+        </div>
+      </div>
+
+      <div class="card score">
+        <div class="mini-title">Citizen Score</div>
+        <div class="big-score">87</div>
+        <div class="bar" style="margin-top:8px;">
+          <div style="width:87%"></div>
+        </div>
+        <div class="muted small" style="margin-top:8px;">Reliability benchmark: Above district median by 18 points.</div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="card small-stat">
+          <span>Accuracy</span>
+          <strong>92%</strong>
+        </div>
+        <div class="card small-stat">
+          <span>Total Verifications</span>
+          <strong>134</strong>
+        </div>
+        <div class="card small-stat">
+          <span>Reports Filed</span>
+          <strong>24</strong>
+        </div>
+        <div class="card small-stat">
+          <span>Resolved Cases</span>
+          <strong>19</strong>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="mini-title">Unlocked Badges</div>
+        <div class="achievement-grid">
+          <div class="achievement-badge unlocked">
+            <strong>Trusted Witness</strong>
+            <span>20+ validated verifications</span>
+          </div>
+          <div class="achievement-badge unlocked">
+            <strong>Rapid Responder</strong>
+            <span>Average report time under 45 min</span>
+          </div>
+          <div class="achievement-badge unlocked">
+            <strong>Accuracy Sentinel</strong>
+            <span>90%+ authority match rate</span>
+          </div>
+          <div class="achievement-badge unlocked">
+            <strong>Civic Stabilizer</strong>
+            <span>15+ cases resolved with contribution</span>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="report.html">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1v5h5"/><path d="M8 13h8M8 17h8"/></svg>
+        <span>Report</span>
+      </a>
+      <a href="feed.html">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v4H4zM4 10h10v9H4zM15 10h5v9h-5z"/></svg>
+        <span>Feed</span>
+      </a>
+      <a href="profile.html" class="active">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-5 0-8 2.5-8 5.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5C20 16.5 17 14 12 14z"/></svg>
+        <span>Profile</span>
+      </a>
+    </nav>
+
+  </div>
+</body>
+</html>

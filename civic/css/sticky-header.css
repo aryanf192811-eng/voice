@@ -1,0 +1,20 @@
+/* Global sticky header patch (dimension-safe, add-only) */
+header,
+.header,
+.app-header,
+.topbar,
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Fallback mode when sticky is blocked by parent overflow */
+.is-fixed-header {
+  position: fixed !important;
+  top: 0;
+  z-index: 1000;
+  width: inherit;
+  left: auto;
+  right: auto;
+}

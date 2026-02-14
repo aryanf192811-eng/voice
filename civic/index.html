@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2c5d8d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Civic" />
+  <title>Civic</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/sticky-header.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script defer src="js/main.js"></script>
+  <script defer src="js/dashboard.js"></script>
+  <script defer src="js/sticky-header.js"></script>
+</head>
+
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-dot"></div>
+        Civic
+      </div>
+      <button class="logout">Logout</button>
+    </header>
+
+    <main class="page dashboard-page">
+
+      <div class="hero card">
+        <h2>Welcome back, citizen</h2>
+        <p>National civic network. Synced 09:42.</p>
+      </div>
+
+      <section class="dashboard-group">
+        <div class="card score-hero-card">
+          <div class="score-row">
+            <div class="score-label">Citizen Trust Score</div>
+            <div class="score-value" data-count="87">87</div>
+          </div>
+          <div class="bar">
+            <div style="width: 87%"></div>
+          </div>
+          <div class="score-note">Top 12% reliability in your district.</div>
+        </div>
+
+        <div class="card overview-card">
+          <div class="mini-title">Case Overview</div>
+          <div class="stats">
+            <div class="stat-box"><strong data-count="18">18</strong><span>Open</span></div>
+            <div class="stat-box"><strong data-count="7">7</strong><span>In Progress</span></div>
+            <div class="stat-box"><strong data-count="46">46</strong><span>Resolved</span></div>
+          </div>
+          <div class="trend-chip">Weekly trend: +14%</div>
+        </div>
+
+        <div class="card weekly-card">
+          <div class="mini-title">Weekly Reports</div>
+          <div class="mini-chart">
+            <div style="height: 40%"><span>Mon</span></div>
+            <div style="height: 58%"><span>Tue</span></div>
+            <div style="height: 66%"><span>Wed</span></div>
+            <div style="height: 48%"><span>Thu</span></div>
+            <div style="height: 78%"><span>Fri</span></div>
+            <div style="height: 52%"><span>Sat</span></div>
+            <div style="height: 44%"><span>Sun</span></div>
+          </div>
+          <div class="chart-meta">Peak submissions this week: Friday</div>
+        </div>
+
+        <div class="card distribution-card">
+          <div class="mini-title">Resolution & Category Mix</div>
+          <div class="viz-row">
+            <div class="ring-viz" aria-hidden="true"></div>
+            <div class="legend-list">
+              <div><span class="dot infra"></span>Infrastructure 42%</div>
+              <div><span class="dot utilities"></span>Utilities 31%</div>
+              <div><span class="dot safety"></span>Safety 27%</div>
+            </div>
+          </div>
+          <div class="distribution-bars" aria-hidden="true">
+            <div class="distribution-row">
+              <div class="distribution-track"><div class="distribution-fill" style="width:42%"></div></div>
+              <strong>42%</strong>
+            </div>
+            <div class="distribution-row utilities">
+              <div class="distribution-track"><div class="distribution-fill" style="width:31%"></div></div>
+              <strong>31%</strong>
+            </div>
+            <div class="distribution-row safety">
+              <div class="distribution-track"><div class="distribution-fill" style="width:27%"></div></div>
+              <strong>27%</strong>
+            </div>
+          </div>
+          <div class="resolution-line">
+            <span>Resolution Rate</span>
+            <strong data-count="82">82%</strong>
+          </div>
+          <div class="bar"><div style="width: 82%"></div></div>
+        </div>
+      </section>
+
+      <section class="dashboard-group">
+        <div class="card alerts-card">
+          <div class="mini-title">Nearby Alerts</div>
+          <div class="alert-item">
+            <div class="alert-head">
+              <span class="alert-title">Drain collapse risk - Sector 12A</span>
+              <span class="badge red">High</span>
+            </div>
+            <div class="alert-meta">0.9 km | Updated 12m ago</div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-head">
+              <span class="alert-title">Streetlight outage cluster - Ring Road</span>
+              <span class="badge orange">Medium</span>
+            </div>
+            <div class="alert-meta">1.7 km | Updated 34m ago</div>
+          </div>
+        </div>
+
+        <div class="card activity-card">
+          <div class="mini-title">Recent Activity</div>
+          <div class="activity-item">
+            <div class="activity-title">Your verification added to Case #CIV-2741</div>
+            <div class="activity-meta">08:51 | Reliability +1.2</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-title">Road hazard report routed to Municipal Works</div>
+            <div class="activity-meta">19:10 | Status: In Progress</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="actions-row">
+        <a href="report.html" class="button-primary">Create New Report</a>
+        <a href="feed.html" class="button-secondary">View Incident Feed</a>
+      </div>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html" class="active">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="report.html">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1v5h5"/><path d="M8 13h8M8 17h8"/></svg>
+        <span>Report</span>
+      </a>
+      <a href="feed.html">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v4H4zM4 10h10v9H4zM15 10h5v9h-5z"/></svg>
+        <span>Feed</span>
+      </a>
+      <a href="profile.html">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-5 0-8 2.5-8 5.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5C20 16.5 17 14 12 14z"/></svg>
+        <span>Profile</span>
+      </a>
+    </nav>
+
+  </div>
+</body>
+</html>

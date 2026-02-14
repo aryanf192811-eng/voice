@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2c5d8d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Civic" />
+    <title>Feed - Civic</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/sticky-header.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/feed.css" />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/feed.js"></script>
+    <script defer src="js/sticky-header.js"></script>
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo-dot"></div>
+          Civic
+        </div>
+        <button class="logout">Logout</button>
+      </header>
+
+      <main class="page">
+        <div class="page-title">Civic Incident Feed</div>
+        <div class="page-sub">Verified field reports prioritized by public safety impact.</div>
+        <input class="search" placeholder="Search incidents, locations, or case ID" />
+        <div class="filters">
+          <button>All</button>
+          <button>Verified</button>
+          <button>High Severity</button>
+        </div>
+
+        <div class="card feed-card">
+          <img src="assets/images/city.jpg" />
+          <div class="chips">
+            <span class="badge green">Verified</span>
+            <span class="badge red">High Severity</span>
+          </div>
+          <div class="feed-title">Main road sinkhole near central bus terminal</div>
+          <div class="feed-desc">
+            Lane two closure and bus rerouting in effect after structural collapse report.
+          </div>
+          <div class="feed-meta">Central Bus Terminal | 14 Feb, 08:30</div>
+          <div class="confidence">
+            <div class="confidence-head">
+              <span>Confidence Score</span>
+              <strong>88%</strong>
+            </div>
+            <div class="bar"><div style="width: 88%"></div></div>
+          </div>
+          <a href="case.html" class="view-details">View Details</a>
+        </div>
+
+        <div class="card feed-card">
+          <img src="assets/images/water.jpg" />
+          <div class="chips">
+            <span class="badge green">Verified</span>
+            <span class="badge orange">Medium</span>
+          </div>
+          <div class="feed-title">Water contamination complaint in residential blocks</div>
+          <div class="feed-desc">
+            Unusual odor and yellow tint reported across three residential blocks.
+          </div>
+          <div class="feed-meta">Riverside Block B | 14 Feb, 06:10</div>
+          <div class="confidence">
+            <div class="confidence-head">
+              <span>Confidence Score</span>
+              <strong>63%</strong>
+            </div>
+            <div class="bar"><div style="width: 63%"></div></div>
+          </div>
+          <a href="case.html" class="view-details">View Details</a>
+        </div>
+
+        <div class="card feed-card">
+          <img src="assets/images/traffic.jpg" />
+          <div class="chips">
+            <span class="badge orange">Under Review</span>
+            <span class="badge orange">Medium</span>
+          </div>
+          <div class="feed-title">Traffic signal blackout at school intersection</div>
+          <div class="feed-desc">
+            Morning peak-hour congestion with unsafe pedestrian crossing conditions.
+          </div>
+          <div class="feed-meta">North Avenue School Junction | 14 Feb, 07:42</div>
+          <div class="confidence">
+            <div class="confidence-head">
+              <span>Confidence Score</span>
+              <strong>74%</strong>
+            </div>
+            <div class="bar"><div style="width: 74%"></div></div>
+          </div>
+          <a href="case.html" class="view-details">View Details</a>
+        </div>
+
+        <div class="card feed-card">
+          <img src="assets/images/hospital.jpg" />
+          <div class="chips">
+            <span class="badge green">Verified</span>
+            <span class="badge red">High Severity</span>
+          </div>
+          <div class="feed-title">Hospital zone flooding after drainage overflow</div>
+          <div class="feed-desc">
+            Access road to emergency gate partially submerged; ambulance lane constrained.
+          </div>
+          <div class="feed-meta">East Medical District | 14 Feb, 05:55</div>
+          <div class="confidence">
+            <div class="confidence-head">
+              <span>Confidence Score</span>
+              <strong>91%</strong>
+            </div>
+            <div class="bar"><div style="width: 91%"></div></div>
+          </div>
+          <a href="case.html" class="view-details">View Details</a>
+        </div>
+      </main>
+
+      <nav class="bottom-nav">
+        <a href="index.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="report.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1v5h5"/><path d="M8 13h8M8 17h8"/></svg>
+          <span>Report</span>
+        </a>
+        <a href="feed.html" class="active">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v4H4zM4 10h10v9H4zM15 10h5v9h-5z"/></svg>
+          <span>Feed</span>
+        </a>
+        <a href="profile.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-5 0-8 2.5-8 5.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5C20 16.5 17 14 12 14z"/></svg>
+          <span>Profile</span>
+        </a>
+      </nav>
+    </div>
+  </body>
+</html>

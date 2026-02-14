@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2c5d8d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Civic" />
+  <title>Case - Civic</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/sticky-header.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/case.css" />
+  <script defer src="js/main.js"></script>
+  <script defer src="js/case.js"></script>
+  <script defer src="js/sticky-header.js"></script>
+</head>
+
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-dot"></div>
+        Civic
+      </div>
+      <button class="logout">Logout</button>
+    </header>
+
+    <main class="page">
+      <div class="page-title">Case CIV-2741</div>
+      <div class="page-sub">Municipal infrastructure alert under active review.</div>
+
+      <div class="case-hero">
+        <img class="case-image" src="assets/images/city.jpg" />
+      </div>
+
+      <div class="chips">
+        <span class="badge green">Verified</span>
+        <span class="badge red">High Severity</span>
+      </div>
+
+      <h2 class="case-title">Main road sinkhole near central bus terminal</h2>
+
+      <p class="case-desc">
+        Structural teams have placed temporary barriers and diverted vehicles to eastbound lanes.
+      </p>
+
+      <div class="case-meta-grid">
+        <div class="case-meta-item">
+          <div class="label">Reported</div>
+          <div class="value">14 Feb, 08:30</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="label">Updated</div>
+          <div class="value">14 Feb, 09:18</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="label">Witness Count</div>
+          <div class="value">19 Citizens</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="label">Department</div>
+          <div class="value">Municipal Works</div>
+        </div>
+      </div>
+
+      <div class="confidence">
+        <div class="confidence-head">
+          <span>Confidence Score</span>
+          <strong>88%</strong>
+        </div>
+        <div class="bar"><div style="width:88%"></div></div>
+      </div>
+
+      <div class="authority">
+        <strong>Authority Trust Indicators</strong>
+        <p>Signal quality passed cross-source verification and is flagged for field deployment priority.</p>
+        <div class="trust-line">
+          <span>Geo-match: 96%</span>
+          <span>Duplicate risk: Low</span>
+        </div>
+      </div>
+
+      <button class="button-primary verify-btn" onclick="increaseScore()">Confirm This Incident</button>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="report.html">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1v5h5"/><path d="M8 13h8M8 17h8"/></svg>
+        <span>Report</span>
+      </a>
+      <a href="feed.html" class="active">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v4H4zM4 10h10v9H4zM15 10h5v9h-5z"/></svg>
+        <span>Feed</span>
+      </a>
+      <a href="profile.html">
+        <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-5 0-8 2.5-8 5.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5C20 16.5 17 14 12 14z"/></svg>
+        <span>Profile</span>
+      </a>
+    </nav>
+
+  </div>
+</body>
+</html>

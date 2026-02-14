@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#2c5d8d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Civic" />
+  <title>Report - Civic</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/sticky-header.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/report.css" />
+  <link rel="stylesheet" href="css/emergency.css" />
+
+  <script defer src="js/main.js"></script>
+  <script defer src="js/report.js"></script>
+  <script defer src="js/emergency-sos.js"></script>
+  <script defer src="js/accident-report.js"></script>
+  <script defer src="js/sticky-header.js"></script>
+</head>
+
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-dot"></div>
+      Civic
+    </div>
+    <button class="logout">Logout</button>
+  </header>
+
+  <main class="page">
+    <div class="page-title">Secure Citizen Reporting</div>
+    <!-- <div class="page-sub">
+      Submit verified incidents for rapid municipal action.
+    </div> -->
+
+    <div class="card safety-card">
+      <!-- <div>
+        <div class="mini-title">Emergency Escalation</div
+        <div class="muted small">Use only for immediate threats to life or public safety.</div>
+      </div> -->
+      <div class="safety-actions">
+        <button id="sosTrigger" class="sos sos-btn">SOS</button>
+        <button id="accidentTrigger" class="accident accident-btn">Report Accident</button>
+      </div>
+    </div>
+
+    <div id="cameraModal" class="camera-modal hidden" role="dialog" aria-modal="true" aria-label="Camera Capture">
+      <div class="camera-shell">
+        <video id="cameraStream" autoplay playsinline></video>
+        <div class="camera-actions">
+          <button id="captureMedia" type="button">Capture</button>
+          <button id="closeCamera" type="button">Close</button>
+        </div>
+        <div id="emergencyStatus" class="emergency-status" aria-live="polite"></div>
+      </div>
+    </div>
+    <div id="emergencyCameraModal" class="camera-modal hidden" role="dialog" aria-modal="true" aria-label="Emergency Camera Capture">
+      <div class="camera-shell">
+        <video id="emergencyCameraStream" autoplay playsinline></video>
+        <div class="camera-actions">
+          <button id="emergencyCapture" type="button">Capture</button>
+          <button id="emergencyClose" type="button">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="emergencyToast" class="hidden" aria-live="polite"></div>
+
+    <div class="card">
+      <div class="mini-title">File Official Report</div>
+      <!-- <div class="muted small">
+        Anonymous submission may apply where legally permitted. Deliberate false reporting is prosecutable.
+      </div> -->
+
+      <form id="reportForm">
+        <label>Report category</label>
+        <select required>
+          <option value="">Select category</option>
+          <option>Road and traffic</option>
+          <option>Water and sanitation</option>
+          <option>Electricity and utilities</option>
+          <option>Public safety</option>
+          <option>Other civic issue</option>
+        </select>
+
+        <label>Location or landmark</label>
+        <input type="text" placeholder="District, road, or landmark" required />
+
+        <label>Priority level</label>
+        <input type="range" min="1" max="3" value="2" />
+
+        <label>Incident description</label>
+        <textarea
+          placeholder="What happened, where, and current risk."
+          required
+        ></textarea>
+
+        <label>Photo or video evidence (optional)</label>
+        <input type="file" multiple />
+
+        <label>Safe follow-up contact (optional)</label>
+        <input type="text" placeholder="Phone or email for investigators" />
+
+        <button class="button-primary" type="submit">
+          Submit Report Securely
+        </button>
+      </form>
+    </div>
+
+    <div class="card">
+      <div class="mini-title">Recent Submissions</div>
+      <div class="muted small">Tickets generated from this device session.</div>
+      <div class="recent">
+        <div class="recent-item">
+          <strong>Water leakage near market lane</strong>
+          <span>Today | Under review | Case CIV-2738</span>
+        </div>
+        <div class="recent-item">
+          <strong>Street light failure in Sector 4</strong>
+          <span>Yesterday | Routed to utilities | Case CIV-2729</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="mini-title">How Your Report Is Processed</div>
+      <ul class="info-list">
+        <li>Duplicate and spam filtering.</li>
+        <li>Location and witness signal verification.</li>
+        <li>Routing to the responsible department.</li>
+        <li>Full audit trail retained.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html">
+      <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="report.html" class="active">
+      <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1v5h5"/><path d="M8 13h8M8 17h8"/></svg>
+      <span>Report</span>
+    </a>
+    <a href="feed.html">
+      <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v4H4zM4 10h10v9H4zM15 10h5v9h-5z"/></svg>
+      <span>Feed</span>
+    </a>
+    <a href="profile.html">
+      <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-5 0-8 2.5-8 5.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5C20 16.5 17 14 12 14z"/></svg>
+      <span>Profile</span>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>
